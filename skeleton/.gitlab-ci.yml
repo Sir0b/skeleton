@@ -1,4 +1,0 @@
-image: bosimplon/simplon_project-safe
-
-job1:
-  script: make check
