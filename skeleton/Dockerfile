@@ -5,3 +5,5 @@ RUN apt update \
  && docker-php-ext-install pdo_pgsql
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
+
+WORKDIR /app

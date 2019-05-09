@@ -6,10 +6,11 @@ services:
       POSTGRES_PASSWORD: simplon
         #- POSTGRES_DB=safeDB
   web1:
-    build: .
+    build: .  #laisser le build est préferable m si on met l'image de son repo docker, pour éviter de re-build à chq fois.
     depends_on:
       - BDD1
     image: php:apache
+    #image:bosimplon/simplon_project-safe 
     environment:
       DATABASE_URL: pgsql://postgres:simplon@BDD1:5432/safeDB
     volumes:
